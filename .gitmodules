@@ -1,0 +1,18 @@
+[submodule "pijsmarietje"]
+	path = pijsmarietje
+	url = git@github.com:bwesterb/pijsmarietje
+[submodule "maried"]
+	path = maried
+	url = git@github.com:bwesterb/maried
+[submodule "mirte"]
+	path = mirte
+	url = git@github.com:bwesterb/mirte
+[submodule "py-joyce"]
+	path = py-joyce
+	url = git@github.com:bwesterb/py-joyce
+[submodule "pymarietje"]
+	path = pymarietje
+	url = git@github.com:bwesterb/pymarietje
+[submodule "sarah"]
+	path = sarah
+	url = git@github.com:bwesterb/sarah
