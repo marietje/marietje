@@ -16,3 +16,9 @@
 [submodule "sarah"]
 	path = sarah
 	url = git@github.com:bwesterb/sarah
+[submodule "berthad"]
+	path = berthad
+	url = git@github.com:bwesterb/berthad.git
+[submodule "py-bertha"]
+	path = py-bertha
+	url = git@github.com:bwesterb/py-bertha.git
