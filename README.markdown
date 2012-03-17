@@ -50,11 +50,13 @@ Installation
     
     **Nota bene** Everyone on the local machine has total access to the
     bertha server.
-5.  Host `pijsmarietje`.
+5.  Configure and host `pijsmarietje`.
    
     ```
     $ cd /srv/default/htdocs # or *your* webdocs root
     $ ln -s /path/to/pijsmarietje pijsmarietje
+    $ cp pijsmarietje/config.js{.example,}
+    $ vi pijsmarietje/config.js
     ```
     
 6.  Set environment, create configuration and run maried. 
