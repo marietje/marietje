@@ -14,7 +14,8 @@ Installation
     $ service mongodb restart
     ```
     
-    **Nota bene** Everyone on the local machine has total access to the mongo server.
+    **Nota bene** Everyone on the local machine has total access to the
+    mongo server.
    
 2.  Install various python packages.
    
@@ -47,7 +48,8 @@ Installation
     $ ./berthad-vfs 127.0.0.1 10819 ./data ./tmp
     ```
     
-    **Nota bene** Everyone on the local machine has total access to the bertha server.
+    **Nota bene** Everyone on the local machine has total access to the
+    bertha server.
 5.  Host `pijsmarietje`.
    
     ```
