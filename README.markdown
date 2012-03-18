@@ -50,6 +50,7 @@ Installation
     
     **Nota bene** Everyone on the local machine has total access to the
     bertha server.
+    
 5.  Configure and host `pijsmarietje`.
    
     ```
@@ -59,7 +60,15 @@ Installation
     $ vi pijsmarietje/config.js
     ```
     
-6.  Set environment, create configuration and run maried. 
+6.  Add a new admin user
+    
+    ```
+    $ mongo
+    > use marietje
+    > db.users.insert({_id:'admin', n:"Admin", l:5, a:null, p:"md5ofpassword"})
+    ```
+    
+7.  Set environment, create configuration and run maried. 
     
     ```
     $ source marietje-environment.sh # sets PATH and PYTHONPATH
