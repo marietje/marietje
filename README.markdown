@@ -3,7 +3,15 @@ TBD
 Installation
 ============
 
-1.  Install and run MongoDB.  MongoDB is used to store metadata.
+1.  Clone marietje and all subpackages.
+   
+    ```
+    $ git clone git://github.com/bwesterb/marietje.git
+    $ git submodule sync
+    $ git submodule update
+    ```
+   
+2.  Install and run MongoDB.  MongoDB is used to store metadata.
    
     ```
     $ echo "deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen" >> /etc/apt/sources.list
@@ -17,17 +25,18 @@ Installation
     **Nota bene** Everyone on the local machine has total access to the
     mongo server.
    
-2.  Install various python packages.
+3.  Install various python packages.
    
     ```
     $ apt-get install python-pymongo \
                       python-gst0.10 \
                       python-gtk2 \
-                      python-yaml
+                      python-yaml \
+                      python-setuptools
     $ easy_install poster
     ```
 
-3.  Install GStreamer and its plugins. GStreamer is used to play media.
+4.  Install GStreamer and its plugins. GStreamer is used to play media.
    
     ```
     $ apt-get install gstreamer0.10-ffmpeg \
@@ -39,9 +48,10 @@ Installation
                       gstreamer0.10-plugins-ugly
     ```
 
-4.  Compile and run `berthad`.  `berthad` will store the media files.
+5.  Compile and run `berthad`.  `berthad` will store the media files.
     
     ```
+    $ apt-get install libglib2.0-dev
     $ cd berthad
     $ make
     $ mkdir data tmp
@@ -51,7 +61,7 @@ Installation
     **Nota bene** Everyone on the local machine has total access to the
     bertha server.
     
-5.  Configure and host `pijsmarietje`.
+6.  Configure and host `pijsmarietje`.
    
     ```
     $ cd /srv/default/htdocs # or *your* webdocs root
@@ -60,7 +70,7 @@ Installation
     $ vi pijsmarietje/config.js
     ```
     
-6.  Add a new admin user
+7.  Add a new admin user
     
     ```
     $ mongo
@@ -68,11 +78,11 @@ Installation
     > db.users.insert({_id:'admin', n:"Admin", l:5, a:null, p:"md5ofpassword"})
     ```
     
-7.  Set environment, create configuration and run maried. 
+8.  Set environment, create configuration and run maried. 
     
     ```
     $ source marietje-environment.sh # sets PATH and PYTHONPATH
     $ cp py/maried/examples/zuid.mirte mymariedconfig.mirte
-    $ mymariedconfig.mirte
+    $ vi mymariedconfig.mirte
     $ mirte mymariedconfig
     ```
