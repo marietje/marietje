@@ -1,9 +1,9 @@
 [submodule "pijsmarietje"]
 	path = pijsmarietje
-	url = git://github.com/bwesterb/pijsmarietje
+	url = git://github.com/marietje/pijsmarietje
 [submodule "maried"]
 	path = maried
-	url = git://github.com/bwesterb/maried
+	url = git://github.com/marietje/maried
 [submodule "mirte"]
 	path = mirte
 	url = git://github.com/bwesterb/mirte
@@ -12,13 +12,13 @@
 	url = git://github.com/bwesterb/py-joyce
 [submodule "pymarietje"]
 	path = pymarietje
-	url = git://github.com/bwesterb/pymarietje
+	url = git://github.com/marietje/pymarietje
 [submodule "sarah"]
 	path = sarah
 	url = git://github.com/bwesterb/sarah
 [submodule "berthad"]
 	path = berthad
-	url = git://github.com/bwesterb/berthad.git
+	url = git://github.com/bertha/berthad.git
 [submodule "py-bertha"]
 	path = py-bertha
-	url = git://github.com/bwesterb/py-bertha.git
+	url = git://github.com/bertha/py-bertha.git
