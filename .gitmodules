@@ -1,27 +1,27 @@
 [submodule "pijsmarietje"]
 	path = pijsmarietje
-	url = git://github.com/marietje/pijsmarietje
+	url = https://github.com/marietje/pijsmarietje
 [submodule "maried"]
 	path = maried
-	url = git://github.com/marietje/maried
+	url = https://github.com/marietje/maried
 [submodule "mirte"]
 	path = mirte
-	url = git://github.com/bwesterb/mirte
+	url = https://github.com/bwesterb/mirte
 [submodule "py-joyce"]
 	path = py-joyce
-	url = git://github.com/bwesterb/py-joyce
+	url = https://github.com/bwesterb/py-joyce
 [submodule "pymarietje"]
 	path = pymarietje
-	url = git://github.com/marietje/pymarietje
+	url = https://github.com/marietje/pymarietje
 [submodule "sarah"]
 	path = sarah
-	url = git://github.com/bwesterb/sarah
+	url = https://github.com/bwesterb/sarah
 [submodule "berthad"]
 	path = berthad
-	url = git://github.com/bertha/berthad.git
+	url = https://github.com/bertha/berthad.git
 [submodule "py-bertha"]
 	path = py-bertha
-	url = git://github.com/bertha/py-bertha.git
+	url = https://github.com/bertha/py-bertha.git
 [submodule "carah"]
 	path = carah
-	url = git://github.com/bwesterb/carah
+	url = https://github.com/bwesterb/carah
