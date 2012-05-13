@@ -22,3 +22,6 @@
 [submodule "py-bertha"]
 	path = py-bertha
 	url = git://github.com/bertha/py-bertha.git
+[submodule "carah"]
+	path = carah
+	url = git://github.com/bwesterb/carah

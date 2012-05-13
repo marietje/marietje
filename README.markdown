@@ -77,8 +77,14 @@ Installation
     > use marietje
     > db.users.insert({_id:'admin', n:"Admin", l:5, a:null, p:"md5ofpassword"})
     ```
+
+8.  Optionally, compile the `carah` module
+
+    ```
+    $ pushd carah && python setup.py build --inplace && mv *.so src && popd
+    ```
     
-8.  Set environment, create configuration and run maried. 
+9.  Set environment, create configuration and run maried. 
     
     ```
     $ source marietje-environment.sh # sets PATH and PYTHONPATH
