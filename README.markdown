@@ -6,9 +6,9 @@ Installation
 1.  Clone marietje and all subpackages.
    
     ```
-    $ git clone git://github.com/bwesterb/marietje.git
+    $ git clone git://github.com/marietje/marietje.git
     $ git submodule sync
-    $ git submodule update
+    $ git submodule update --init
     ```
    
 2.  Install and run MongoDB.  MongoDB is used to store metadata.
