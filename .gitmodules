@@ -3,7 +3,7 @@
 	url = https://github.com/marietje/pijsmarietje
 [submodule "maried"]
 	path = maried
-	url = https://github.com/marietje/maried
+	url = https://github.com/theguyofdoom/maried
 [submodule "mirte"]
 	path = mirte
 	url = https://github.com/bwesterb/mirte
