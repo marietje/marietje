@@ -32,7 +32,8 @@ Installation
                       python-gst0.10 \
                       python-gtk2 \
                       python-yaml \
-                      python-setuptools
+                      python-setuptools \
+					  python-dev
     $ easy_install poster msgpack-python
     ```
 
