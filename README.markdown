@@ -52,9 +52,9 @@ Installation
 5.  Compile and run `berthad`.  `berthad` will store the media files.
     
     ```
-    $ apt-get install libglib2.0-dev
-    $ cd berthad
-    $ make
+    $ apt-get install libglib2.0-dev cmake
+    $ cd berthad/release
+    $ ./build
     $ mkdir data tmp
     $ ./berthad-vfs 127.0.0.1 10819 ./data ./tmp
     ```
