@@ -13,6 +13,7 @@ Installation
    
     ```
     $ git clone git://github.com/marietje/marietje.git
+    $ cd marietje
     $ git submodule sync
     $ git submodule update --init
     ```
