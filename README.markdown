@@ -40,8 +40,9 @@ Installation
                       python-gtk2 \
                       python-yaml \
                       python-setuptools \
-                      python-dev
-    $ easy_install poster msgpack-python
+                      python-dev \
+                      msgpack-python \
+                      python-poster
     ```
 
 5.  Install GStreamer and its plugins. GStreamer is used to play media.
