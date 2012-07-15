@@ -3,7 +3,13 @@ TBD
 Installation
 ============
 
-1.  Clone marietje and all subpackages.
+1.  If not installed already, install `git` and `python`.
+
+    ```
+    $ apt-get install git python
+    ```
+
+2.  Clone marietje and all subpackages.
    
     ```
     $ git clone git://github.com/marietje/marietje.git
@@ -11,7 +17,7 @@ Installation
     $ git submodule update --init
     ```
    
-2.  Install and run MongoDB.  MongoDB is used to store metadata.
+3.  Install and run MongoDB.  MongoDB is used to store metadata.
    
     ```
     $ echo "deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen" >> /etc/apt/sources.list
@@ -25,7 +31,7 @@ Installation
     **Nota bene** Everyone on the local machine has total access to the
     mongo server.
    
-3.  Install various python packages.
+4.  Install various python packages.
    
     ```
     $ apt-get install python-pymongo \
@@ -37,7 +43,7 @@ Installation
     $ easy_install poster msgpack-python
     ```
 
-4.  Install GStreamer and its plugins. GStreamer is used to play media.
+5.  Install GStreamer and its plugins. GStreamer is used to play media.
    
     ```
     $ apt-get install gstreamer0.10-ffmpeg \
@@ -49,7 +55,7 @@ Installation
                       gstreamer0.10-plugins-ugly
     ```
 
-5.  Compile and run `berthad`.  `berthad` will store the media files.
+6.  Compile and run `berthad`.  `berthad` will store the media files.
     
     ```
     $ apt-get install libglib2.0-dev cmake
@@ -62,7 +68,7 @@ Installation
     **Nota bene** Everyone on the local machine has total access to the
     bertha server.
     
-6.  Configure and host `pijsmarietje`.
+7.  Configure and host `pijsmarietje`.
    
     ```
     $ cd /srv/default/htdocs # or *your* webdocs root
@@ -71,7 +77,7 @@ Installation
     $ vi pijsmarietje/config.js
     ```
     
-7.  Add a new admin user
+8.  Add a new admin user
     
     ```
     $ mongo
@@ -79,13 +85,13 @@ Installation
     > db.users.insert({_id:'admin', n:"Admin", l:5, a:null, p:"md5ofpassword"})
     ```
 
-8.  Optionally, compile the `carah` module
+9.  Optionally, compile the `carah` module
 
     ```
     $ pushd carah && python setup.py build --inplace && mv *.so src && popd
     ```
     
-9.  Set environment, create configuration and run maried. 
+10. Set environment, create configuration and run maried. 
     
     ```
     $ source marietje-environment.sh # sets PATH and PYTHONPATH
