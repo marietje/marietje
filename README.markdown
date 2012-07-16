@@ -45,6 +45,20 @@ Installation
                       python-poster
     ```
 
+    **Nota bene** It is possible that the `python-pymongo` package does not
+    contain the native extension for BSON-decoding.  This is the case, when:
+
+    ```
+    $ python -c 'import bson; print bson.has_c()'
+    False
+    ```
+
+    In that case, install `pymongo`, using Python's setuptools:
+
+    ```
+    $ easy_install pymongo
+    ```
+
 5.  Install GStreamer and its plugins. GStreamer is used to play media.
    
     ```
