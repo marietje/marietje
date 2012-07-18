@@ -42,6 +42,7 @@ Installation
                       python-setuptools \
                       python-dev \
                       msgpack-python \
+                      python-unidecode \
                       python-poster
     ```
 
