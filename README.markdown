@@ -57,7 +57,7 @@ Installation
     In that case, install `pymongo`, using Python's setuptools:
 
     ```
-    $ easy_install pymongo
+    $ apt-get remove python-pymongo && easy_install pymongo
     ```
 
 5.  Install GStreamer and its plugins. GStreamer is used to play media.
