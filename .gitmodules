@@ -25,3 +25,6 @@
 [submodule "carah"]
 	path = carah
 	url = https://github.com/bwesterb/carah
+[submodule "pynijmegen"]
+	path = pynijmegen
+	url = https://github.com/marietje/pynijmegen.git
