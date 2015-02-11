@@ -41,4 +41,8 @@ https://github.com/marietje/maried:
         - template: jinja
         - user: maried
         - mode: 600
-
+/home/maried/maried:
+    file.managed:
+        - source: salt://player/maried.sh
+        - mode: 755
+        - user: maried
