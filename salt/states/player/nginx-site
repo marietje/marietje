@@ -1,7 +1,4 @@
 server {
-	server_name {{ grains['fqdn'] }};
-
-	location / {
-        root /home/maried/repo/pijsmarietje;
-	}
+    index index.html;
+    root /home/maried/repo/pijsmarietje;
 }
