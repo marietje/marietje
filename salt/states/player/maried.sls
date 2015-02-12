@@ -46,3 +46,6 @@ https://github.com/marietje/maried:
         - source: salt://player/maried.sh
         - mode: 755
         - user: maried
+"/home/maried/maried start":
+    cmd.run:
+        - unless: "/home/maried/maried status"

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
 
@@ -7,28 +7,44 @@ USER=maried
 PIDFILE=$MARIEDHOME/maried.pid
 DAEMON=$MARIEDHOME/repo/bin/mirte
 DAEMON_OPTS=init
+LOGFILE=$MARIEDHOME/maried.log
 export PYTHONPATH=$MARIEDHOME/repo/py:$PYTHONPATH
+
+function start_maried {
+    start-stop-daemon --start --pidfile $PIDFILE --startas /bin/sh --oknodo \
+                    --make-pidfile --background --chdir $MARIEDHOME \
+                    --user $USER --no-close -- \
+                    -c "exec $DAEMON $DAEMON_OPTS > $LOGFILE 2>&1"
+}
+
+function stop_maried {
+    start-stop-daemon --stop --pidfile $PIDFILE --oknodo
+}
+
+function maried_running {
+    start-stop-daemon --status --pidfile $PIDFILE
+}
 
 case "$1" in
     start)
-        start-stop-daemon --start --pidfile $PIDFILE --exec $DAEMON --oknodo \
-                        --chdir $MARIEDHOME --user $USER -- $DAEMON_OPTS
+        start_maried
         ;;
     stop)
-        start-stop-daemon --stop --pidfile $PIDFILE --oknodo
+        stop_maried
         ;;
     status)
-        start-stop-daemon --status --pidfile $PIDFILE || ret=$?
-        if [ $ret -eq 0 ]; then
+        ret=0
+        maried_running || ret=$?
+        if [ $ret -eq 0 ] ; then
             echo "running"
         else
             echo "not running"
         fi
+        exit $ret
         ;;
     restart)
-        start-stop-daemon --stop --pidfile $PIDFILE --oknodo
-        start-stop-daemon --start --pidfile $PIDFILE --exec $DAEMON --oknodo \
-                        --chdir $MARIEDHOME --user $USER -- $DAEMON_OPTS
+        start_maried
+        stop_maried
         ;;
 
     *)
