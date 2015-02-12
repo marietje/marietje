@@ -1,4 +1,8 @@
 server {
     index index.html;
     root /home/maried/repo/pijsmarietje;
+
+    location /config.js {
+        alias /home/maried/pijsmarietje.config.js;
+    }
 }

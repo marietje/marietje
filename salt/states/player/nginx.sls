@@ -7,6 +7,10 @@ nginx:
     file.managed:
         - source: salt://player/nginx-site
         - template: jinja
+/home/maried/pijsmarietje.config.js:
+    file.managed:
+        - source: salt://player/pijsmarietje.config.js
+        - template: jinja
 nginx running:
     service.running:
         - name: nginx
