@@ -1,2 +1,3 @@
 include:
     - .mongo
+    - .berthad
