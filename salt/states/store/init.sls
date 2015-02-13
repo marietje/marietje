@@ -1,0 +1,3 @@
+include:
+    - .mongo
+    - .berthad

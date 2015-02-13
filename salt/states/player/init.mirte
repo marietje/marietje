@@ -1,0 +1,64 @@
+includes:
+  - maried/gstreamer
+  - sarah/log
+  - sarah/shell
+  - maried/lastfm
+  - maried/mongo
+  - maried/joyceRS
+  - maried/bertha
+  - joyce/comet
+instances:
+  threadPool:
+    min: 10
+  collection:
+    module: mongoCollection
+    db: mongoDb
+  desk:
+    module: desk
+    queue: amalgamatedQueue
+    collection: collection
+    mediaStore: mediaStore
+    orchestrator: orchestrator
+    users: users
+  history:
+    module: mongoHistory
+    collection: history
+    db: mongoDb
+  mediaInfo:
+    module: gstMediaInfo
+  orchestrator:
+    module: orchestrator
+    player: player
+    queue: queue
+    randomQueue: randomQueue
+  randomQueue:
+    module: randomQueue
+    random: random
+  player:
+    module: gstPlayer
+  amalgamatedQueue:
+    module: amalgamatedQueue
+    first: queue
+    second: randomQueue
+  queue:
+    module: queue
+  random:
+    module: mongoSimpleRandom
+    collection: collection
+  users:
+    module: mongoUsers
+    db: mongoDb
+  shellServer:
+    module: shellServer
+  logServer:
+    module: logServer
+  mongoDb:
+    module: mongoDb
+  mediaStore:
+    module: berthaMediaStore
+  requestServer:
+    module: joyceRS
+    desk: desk
+    joyceServer: cometServer
+  cometServer:
+    module: cometJoyceServer

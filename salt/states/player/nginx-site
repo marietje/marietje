@@ -1,0 +1,12 @@
+server {
+    {% if grains['vagrant'] %}
+    # sendfile() does not always work on VirtualBox shared folders.
+    sendfile off;
+    {% endif %}
+    index index.html;
+    root /home/maried/repo/pijsmarietje;
+
+    location /config.js {
+        alias /home/maried/pijsmarietje.config.js;
+    }
+}
