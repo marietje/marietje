@@ -15,6 +15,13 @@ def configure_vagrant
             salt.verbose = true
             salt.minion_config = "salt/vagrant_minion_config"
         end
+
+        config.vm.provider :virtualbox do |vb|
+            # TODO linux/win?
+            vb.customize ["modifyvm", :id,
+                                    '--audio', 'coreaudio',
+                                    '--audiocontroller', 'ac97']
+        end
     end
 end
 
