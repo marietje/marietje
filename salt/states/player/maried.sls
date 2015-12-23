@@ -1,25 +1,34 @@
 # Packages
-python-pymongo: pkg.installed
-python-gst0.10: pkg.installed
-python-gtk2: pkg.installed
-python-yaml: pkg.installed
-python-setuptools: pkg.installed
-python-dev: pkg.installed
-msgpack-python: pkg.installed
-python-unidecode: pkg.installed
-python-poster: pkg.installed
-gstreamer0.10-fluendo-mp3: pkg.installed
-gstreamer0.10-plugins-bad: pkg.installed
-gstreamer0.10-plugins-base: pkg.installed
-gstreamer0.10-plugins-good: pkg.installed
-gstreamer0.10-plugins-ugly: pkg.installed
-#gstreamer0.10-ffmpeg: pkg.installed
-#gstreamer0.10-plugins-bad-multiverse: pkg.installed
+maried packages:
+    pkg.installed:
+        - pkgs:
+            - python-pymongo
+            - python-gst-1.0
+            - python-gi
+            - python-gtk2
+            - python-yaml
+            - python-setuptools
+            - python-dev
+            - msgpack-python
+            - python-unidecode
+            - python-poster
+            - gir1.2-gstreamer-1.0
+            - gir1.2-gst-plugins-base-1.0
+            - gstreamer1.0-libav
+            - gstreamer1.0-tools
+            - gstreamer1.0-fluendo-mp3
+            - gstreamer1.0-plugins-bad
+            - gstreamer1.0-plugins-base
+            - gstreamer1.0-plugins-good
+            - gstreamer1.0-plugins-ugly
 
 # User
-maried:
+maried user:
     user.present:
+        - name: maried
         - home: /home/maried
+        - groups:
+            - audio
 
 # Repository
 {% if grains['vagrant'] %}
@@ -41,11 +50,11 @@ https://github.com/marietje/maried:
         - template: jinja
         - user: maried
         - mode: 600
-/home/maried/maried:
+/etc/default/maried:
     file.managed:
-        - source: salt://player/maried.sh
-        - mode: 755
-        - user: maried
-"/home/maried/maried start":
-    cmd.run:
-        - unless: "/home/maried/maried status"
+        - source: salt://player/maried.default
+/etc/systemd/system/maried.service:
+    file.managed:
+        - source: salt://player/maried.service
+maried:
+    service.running

@@ -4,8 +4,9 @@ libglib2.0-dev: pkg.installed
 cmake: pkg.installed
 
 # User
-berthad:
+berthad user:
     user.present:
+        - name: berthad
         - home: /home/berthad
 
 # Repository
@@ -42,11 +43,8 @@ make:
         - cwd: /home/berthad/build
         - watch:
             - cmd: "cmake ../repo"
-/home/berthad/berthad:
+/etc/systemd/system/berthad.service:
     file.managed:
-        - source: salt://store/berthad.sh
-        - mode: 755
-        - user: berthad
-"/home/berthad/berthad start":
-    cmd.run:
-        - unless: "/home/berthad/berthad status"
+        - source: salt://store/berthad.service
+berthad:
+    service.running

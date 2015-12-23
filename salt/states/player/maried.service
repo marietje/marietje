@@ -1,0 +1,11 @@
+[Unit]
+Description=MarieD music-playing daemon
+
+[Service]
+ExecStart=/home/maried/repo/bin/mirte init
+EnvironmentFile=-/etc/default/maried
+WorkingDirectory=/home/maried
+User=maried
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,10 @@
+[Unit]
+Description=BerthaD stores blobs
+
+[Service]
+ExecStart=/home/berthad/build/berthad-vfs 0.0.0.0 10819 data tmp
+WorkingDirectory=/home/berthad
+User=berthad
+
+[Install]
+WantedBy=multi-user.target
