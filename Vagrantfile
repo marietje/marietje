@@ -1,9 +1,11 @@
 # See https://vagrantup.com
 
+$main_ip = '10.109.97.2'
+
 Vagrant.configure(2) do |config|
     config.vm.box = "ubuntu/trusty64"
     config.vm.hostname = "vagrant-marietje"
-    config.vm.network :public_network
+    config.vm.network :private_network, ip: $main_ip
 
     # Specify URL for old versions of vagrant
     config.vm.box_url = "https://atlas.hashicorp.com/ubuntu/boxes/" \
