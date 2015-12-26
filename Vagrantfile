@@ -21,6 +21,7 @@ def configure_vagrant
             vb.customize ["modifyvm", :id,
                                     '--audio', 'coreaudio',
                                     '--audiocontroller', 'ac97']
+            vb.gui = true
         end
 
         if Vagrant.has_plugin?("vagrant-cachier")

@@ -36,7 +36,7 @@ maried user:
     file.symlink:
         - target: /vagrant
 {% else %}
-https://github.com/marietje/maried:
+https://github.com/marietje/marietje:
     git.latest:
         - target: /home/maried/repo
     require:

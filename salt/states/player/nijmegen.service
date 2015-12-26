@@ -1,0 +1,11 @@
+[Unit]
+Description=Display for MarieD
+
+[Service]
+ExecStart=/usr/bin/startx
+EnvironmentFile=-/etc/default/nijmegen
+WorkingDirectory=/home/nijmegen
+User=nijmegen
+
+[Install]
+WantedBy=multi-user.target

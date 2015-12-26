@@ -1,3 +1,4 @@
 include:
     - .maried
     - .nginx
+    - .nijmegen
