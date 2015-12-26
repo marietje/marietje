@@ -22,12 +22,7 @@ Installation
 3.  Install and run MongoDB.  MongoDB is used to store metadata.
    
     ```
-    $ echo "deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen" >> /etc/apt/sources.list
-    $ apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
-    $ apt-get update
-    $ apt-get install mongodb-10gen
-    $ echo "bind_ip=127.0.0.1" >> /etc/mongodb.conf
-    $ service mongodb restart
+    $ apt-get install mongodb-server
     ```
     
     **Nota bene** Everyone on the local machine has total access to the
@@ -37,7 +32,7 @@ Installation
    
     ```
     $ apt-get install python-pymongo \
-                      python-gst0.10 \
+                      python-gst-1.0 \
                       python-gtk2 \
                       python-yaml \
                       python-setuptools \
@@ -58,19 +53,18 @@ Installation
     In that case, install `pymongo`, using Python's setuptools:
 
     ```
-    $ apt-get remove python-pymongo && easy_install pymongo
+    $ apt-get remove python-pymongo && pip install pymongo
     ```
 
 5.  Install GStreamer and its plugins. GStreamer is used to play media.
    
     ```
-    $ apt-get install gstreamer0.10-ffmpeg \
-                      gstreamer0.10-fluendo-mp3 \
-                      gstreamer0.10-plugins-bad \
-                      gstreamer0.10-plugins-bad-multiverse \
-                      gstreamer0.10-plugins-base \
-                      gstreamer0.10-plugins-good \
-                      gstreamer0.10-plugins-ugly
+    $ apt-get install gstreamer1.0-fluendo-mp3 \
+                      gstreamer1.0-plugins-bad \
+                      gstreamer1.0-plugins-bad-multiverse \
+                      gstreamer1.0-plugins-base \
+                      gstreamer1.0-plugins-good \
+                      gstreamer1.0-plugins-ugly
     ```
 
 6.  Compile and run `berthad`.  `berthad` will store the media files.
