@@ -1,7 +1,10 @@
 # Packages
-build-essential: pkg.installed
-libglib2.0-dev: pkg.installed
-cmake: pkg.installed
+bertha packages:
+    pkg.installed:
+        - pkgs:
+            - build-essential
+            - libglib2.0-dev
+            - cmake
 
 # User
 berthad user:

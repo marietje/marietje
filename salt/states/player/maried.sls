@@ -2,7 +2,6 @@
 maried packages:
     pkg.installed:
         - pkgs:
-            - python-pymongo
             - python-gst-1.0
             - python-gi
             - python-gtk2

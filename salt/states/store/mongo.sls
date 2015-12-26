@@ -1,6 +1,7 @@
-mongodb-server:
-    pkg:
-        - installed
+mongo packages:
+    pkg.installed:
+        - pkgs:
+            - mongodb-server
 mongodb:
     service:
         - running
@@ -10,5 +11,6 @@ mongodb:
         - source: salt://store/ensure-adminUser-exists.py
     cmd:
         - run
-        - requires:
+        - require:
             - file: /root/ensure-adminUser-exists.py
+            - service: mongodb
