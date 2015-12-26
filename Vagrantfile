@@ -22,6 +22,10 @@ def configure_vagrant
                                     '--audio', 'coreaudio',
                                     '--audiocontroller', 'ac97']
         end
+
+        if Vagrant.has_plugin?("vagrant-cachier")
+            config.cache.scope = :box
+        end
     end
 end
 
