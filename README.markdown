@@ -130,13 +130,10 @@ by visiting
 
     https://vagrant-marietje/
 
-To get a shell on the virtual machine, execute
+The default user is `admin` with blank password.  To get a shell
+on the virtual machine, execute
 
     vagrant ssh
 
 Note that `maried` is running as the `maried` user from `/home/maried`.
-
-There are two caveats with the marietje setup on the vagrant virtual machine
-
- * audio does not work &
- * the graphical display is not configured
+The display is running as `nijmegen`.
