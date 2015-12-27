@@ -4,8 +4,9 @@
 nijmegen packages:
     pkg.installed:
         - pkgs:
-            - i3-wm
+            - i3
             - xinit
+            - x11-xserver-utils
 
 # User
 nijmegen user:
