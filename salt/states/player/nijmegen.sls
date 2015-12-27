@@ -12,6 +12,8 @@ nijmegen user:
     user.present:
         - name: nijmegen
         - home: /home/nijmegen
+        - groups:
+            - audio
 
 # Repository
 {% if grains['vagrant'] %}
