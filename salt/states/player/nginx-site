@@ -9,4 +9,10 @@ server {
     location /config.js {
         alias /home/maried/pijsmarietje.config.js;
     }
+
+    location /api {
+        rewrite /api / break;
+        proxy_pass http://localhost:8080;
+        client_max_body_size 1g;
+    }
 }

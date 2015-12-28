@@ -62,3 +62,4 @@ instances:
     joyceServer: cometServer
   cometServer:
     module: cometJoyceServer
+    host: 127.0.0.1
