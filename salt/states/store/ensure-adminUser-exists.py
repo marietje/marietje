@@ -15,7 +15,7 @@ def main():
         except pymongo.errors.ConnectionFailure:
             n_tries += 1
             time.sleep(1)
-            if n_tries < 10:
+            if n_tries < 20:
                 continue
             raise
         break
