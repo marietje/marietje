@@ -3,3 +3,5 @@ base:
         - vagrant
     'bach.*':
         - bach
+    'marietje-noord':
+        - noord

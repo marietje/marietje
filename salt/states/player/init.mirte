@@ -22,7 +22,7 @@ instances:
     users: users
   history:
     module: mongoHistory
-    collection: history
+    collection: {{ pillar['maried']['history_collection'] }}
     db: mongoDb
   mediaInfo:
     module: gstMediaInfo
@@ -54,8 +54,11 @@ instances:
     module: logServer
   mongoDb:
     module: mongoDb
+    host: {{ pillar['maried']['mongo_host'] }}
   mediaStore:
     module: berthaMediaStore
+    host: {{ pillar['maried']['bertha_host'] }}
+    port: {{ pillar['maried']['bertha_port'] }}
   requestServer:
     module: joyceRS
     desk: desk
