@@ -41,6 +41,7 @@ maried user:
         - target: /home/maried/repo
         - name: https://github.com/marietje/marietje
         - submodules: true
+        - user: maried
     require:
         - pkg: git
 {% endif %}

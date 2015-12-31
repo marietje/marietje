@@ -27,6 +27,7 @@ nijmegen user:
         - name: https://github.com/marietje/marietje
         - target: /home/nijmegen/repo
         - submodules: true
+        - user: nijmegen
     require:
         - pkg: git
 {% endif %}
