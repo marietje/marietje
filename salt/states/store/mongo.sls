@@ -5,6 +5,7 @@ mongo packages:
 mongodb:
     service:
         - running
+{% if grains.get('vagrant') %}
 /root/ensure-adminUser-exists.py:
     file.managed:
         - mode: 700
@@ -14,3 +15,4 @@ mongodb:
         - require:
             - file: /root/ensure-adminUser-exists.py
             - service: mongodb
+{% endif %}

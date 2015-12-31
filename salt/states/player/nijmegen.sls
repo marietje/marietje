@@ -17,7 +17,7 @@ nijmegen user:
             - audio
 
 # Repository
-{% if grains['vagrant'] %}
+{% if grains.get('vagrant') %}
 /home/nijmegen/repo:
     file.symlink:
         - target: /vagrant

@@ -31,7 +31,7 @@ maried user:
             - audio
 
 # Repository
-{% if grains['vagrant'] %}
+{% if grains.get('vagrant') %}
 /home/maried/repo:
     file.symlink:
         - target: /vagrant

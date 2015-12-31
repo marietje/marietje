@@ -1,5 +1,5 @@
 server {
-    {% if grains['vagrant'] %}
+    {% if grains.get('vagrant') %}
     # sendfile() does not always work on VirtualBox shared folders.
     sendfile off;
     {% endif %}
