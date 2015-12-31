@@ -6,3 +6,5 @@ base:
         - player
     'bach.*':
         - store
+    'marietje-noord':
+        - player

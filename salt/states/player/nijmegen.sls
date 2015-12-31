@@ -22,9 +22,11 @@ nijmegen user:
     file.symlink:
         - target: /vagrant
 {% else %}
-https://github.com/marietje/marietje:
+/home/nijmegen/repo:
     git.latest:
-        - target: /home/maried/repo
+        - name: https://github.com/marietje/marietje
+        - target: /home/nijmegen/repo
+        - submodules: true
     require:
         - pkg: git
 {% endif %}

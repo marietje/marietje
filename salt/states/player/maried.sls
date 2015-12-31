@@ -36,9 +36,11 @@ maried user:
     file.symlink:
         - target: /vagrant
 {% else %}
-https://github.com/marietje/marietje:
+/home/maried/repo:
     git.latest:
         - target: /home/maried/repo
+        - name: https://github.com/marietje/marietje
+        - submodules: true
     require:
         - pkg: git
 {% endif %}
