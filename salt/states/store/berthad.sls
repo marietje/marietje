@@ -41,12 +41,18 @@ https://github.com/bertha/berthad:
     cmd.run:
         - creates: /home/berthad/build/Makefile
         - cwd: /home/berthad/build
+# When we're on vagrant, berthad can't write to the repo folder and
+# will fail.  Thus we run it as root on vagrant.
+{% if not grains.get('vagrant') %}
         - user: berthad
+{% endif %}
 make:
     cmd.run:
         - creates: /home/berthad/build/berthad-vfs
         - cwd: /home/berthad/build
-        - user: berthad
+{% if not grains.get('vagrant') %}
+        - user: berthad     # See cmake above.
+{% endif %}
         - watch:
             - cmd: "cmake ../repo"
 /etc/systemd/system/berthad.service:

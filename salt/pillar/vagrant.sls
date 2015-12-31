@@ -1,4 +1,4 @@
 bertha:
     port: 10819
-    data_path: /home/bertha/data
-    tmp_path: /home/bertha/tmp
+    data_path: /home/berthad/data
+    tmp_path: /home/berthad/tmp
