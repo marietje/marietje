@@ -2,6 +2,7 @@
 maried packages:
     pkg.installed:
         - pkgs:
+            - python-prctl
             - python-gst-1.0
             - python-gi
             - python-gtk2
