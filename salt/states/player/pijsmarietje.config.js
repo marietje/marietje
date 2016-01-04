@@ -1,6 +1,6 @@
 var pijsmarietje_config = {
     server: {
-{% if grains['vagrant'] %}
+{% if grains.get('vagrant') %}
         host: window.location.host,
 {% else %}
         host: '{{ grains['fqdn'] }}',
