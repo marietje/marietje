@@ -2,7 +2,7 @@
 
 def configure_vagrant
     Vagrant.configure(2) do |config|
-        config.vm.box = "debian/jessie64"
+        config.vm.box = "debian/contrib-jessie64"
         config.vm.hostname = "vagrant-marietje"
         int = public_interface
         config.vm.network :public_network, :bridge => int
