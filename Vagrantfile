@@ -15,12 +15,13 @@ def configure_vagrant
             salt.run_highstate = true
             salt.verbose = true
             salt.minion_config = "salt/vagrant_minion_config"
+            salt.bootstrap_options = '-F -c /tmp/ -P'
         end
 
         config.vm.provider :virtualbox do |vb|
             # TODO linux/win?
             vb.customize ["modifyvm", :id,
-                                    '--audio', 'coreaudio',
+                                    '--audio', 'alsa',
                                     '--audiocontroller', 'ac97']
             vb.gui = true
         end
