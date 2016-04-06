@@ -2,10 +2,11 @@
 
 def configure_vagrant
     Vagrant.configure(2) do |config|
-        config.vm.box = "debian/jessie64"
+        config.vm.box = "debian/contrib-jessie64"
         config.vm.hostname = "vagrant-marietje"
-        int = public_interface
-        config.vm.network :public_network, :bridge => int
+        # int = public_interface
+        # config.vm.network :public_network, :bridge => int
+        config.vm.network :private_network, ip: '10.1.2.3'
 
         # Configuration of salt
         config.vm.synced_folder "salt/states", "/srv/salt"

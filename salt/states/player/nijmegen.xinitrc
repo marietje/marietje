@@ -1,7 +1,7 @@
 #!/bin/sh
 
 setterm -blank 0 -powersave off -powerdown 0
-xset f off
+xset s off
 xset -dpms
 
 i3 &

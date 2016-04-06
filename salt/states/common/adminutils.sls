@@ -7,6 +7,7 @@ adminutils packages:
             - iotop
             - ncdu
             - vim
+            - socat
 /etc/vim/vimrc.local:
     file.managed:
         - source: salt://common/vimrc
