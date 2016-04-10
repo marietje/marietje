@@ -19,9 +19,14 @@ def configure_vagrant
         end
 
         config.vm.provider :virtualbox do |vb|
-            # TODO linux/win?
+            # TODO win?
+            if (/darwin/ =~ RUBY_PLATFORM) != nil
+                audio_driver = 'coreaudio'
+            else
+                audio_driver = 'alsa'
+            end
             vb.customize ["modifyvm", :id,
-                                    '--audio', 'alsa',
+                                    '--audio', audio_driver,
                                     '--audiocontroller', 'ac97']
             vb.gui = true
         end
